@@ -13,14 +13,10 @@ $(document).ready(function(){
         hours12 = hours24 >= 12? hours24 - 12: hours24;//will be 0 -11
         var minutes = date.getMinutes();
         var seconds = date.getSeconds();
-
-        // console.log(hours24.toString().length)
-        // console.log(hours24.toString().lenght == '2')
-
-        // hours24 = hours24.toString().length == 2 ? hours24: "0" + hours24;
-        // hours12 = hours12.toString().lenght == 2 ? hours12: "0" + hours12;
-        // minutes = minutes.toString().lenght == 2 ? minutes: "0" + minutes;
-        // seconds = seconds.toString().lenght == 2 ? seconds: "0" + seconds;
+        hours24 = hours24.toString().length == 2 ? hours24: "0" + hours24;
+        hours12 = hours12.toString().length == 2 ? hours12: "0" + hours12;
+        minutes = minutes.toString().length == 2 ? minutes: "0" + minutes;
+        seconds = seconds.toString().length == 2 ? seconds: "0" + seconds;
 
         if(is24){
             $(".digi_clock").html(`<h1>${hours24}:${minutes}:${seconds}</h1>`)
